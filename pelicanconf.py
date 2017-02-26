@@ -36,5 +36,5 @@ DEFAULT_PAGINATION = False
 
 MARKUP = ('md', 'ipynb')
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup']
+PLUGINS = ['ipynb.markup', 'share_post']
 
