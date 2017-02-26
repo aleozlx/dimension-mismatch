@@ -1,7 +1,7 @@
 #!/bin/bash
 
 OUTPUT="./output"
-GH_REPO="../aleozlx.github.io/"
+GH_REPO="../aleozlx.github.io"
 
 rebuild (){
     pelican content -s publishconf.py
@@ -9,7 +9,7 @@ rebuild (){
 }
 
 publish (){
-    rsync -av $OUTPUT/* $GH_REPO
+    rsync -avrc --delete --exclude=".git" $OUTPUT/ $GH_REPO/
     cd $GH_REPO
     git add --all
     git commit -m "update"
