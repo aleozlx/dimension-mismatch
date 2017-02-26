@@ -5,6 +5,7 @@ GH_REPO="../aleozlx.github.io/"
 
 rebuild (){
     pelican content -s publishconf.py
+    rsync LICENSE $OUTPUT/
 }
 
 publish (){
